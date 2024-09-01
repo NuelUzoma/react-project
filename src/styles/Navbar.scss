@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+
+.page-wrapper {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation {
+    border: 1px solid red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: blue;
+}
+
+.middle-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    border: 1px solid red;
+    color: whitesmoke;
+}
+
+.right-nav {
+    border: 1px solid red;
+    display: flex;
+    gap: 25px;
+    left: 2;
+}

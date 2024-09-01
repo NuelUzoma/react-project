@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+}
+
+:host {
+    display: block;
+    background-color: white; // Deep blue background
+    color: rgba(0, 0, 0, 0.718);
+}
+
+.page-container {
+    display: flex;
+    min-height: 100vh;
+    
+    /* Adjust the signup form for mobile views*/
+    @media (max-width: 768px) {
+        justify-content: center;
+    }
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        align-items: center;
+    
+        .image-container {
+          display: none;
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+    }
+}
+
+.left-form {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    border: 1px solid red;
+}
+
+.right-image {
+    flex: 1;
+    position: relative; /* Required for fill to work properly */
+    overflow: hidden;
+    border: 1px solid red;
+    height: 100vh;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .page-container {
+        flex-direction: column;
+    }
+
+    .left-form, .right-image {
+        flex: none;
+        width: 100%;
+    }
+
+    .right-image {
+        height: 300px;
+    }
+}
